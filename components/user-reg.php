@@ -1,5 +1,5 @@
 <?
-if(!empty($_POST)) {
+if(!empty($_POST) && !empty($_POST['login'])) {
     include_once './db.php';
     
     $userName = $_POST['login'];
@@ -10,4 +10,3 @@ if(!empty($_POST)) {
 else {
     header('Location: /');
 }
-

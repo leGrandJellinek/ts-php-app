@@ -1,7 +1,7 @@
 <div class="bg">
 </div>
 <div class="form-container">
-<form class="login form">
+<form action="./components/user-sign.php" method="POST" class="login form">
     <h2 class="login__title">
         Войти
     </h2>
@@ -9,16 +9,16 @@
         <label class="login__label">
             login
         </label>
-        <input type="text" class="login__input" placeholder="">
+        <input type="text" class="login__input" placeholder="" name="login">
     </div>
     <div class="login__row">
         <label class="login__label">
             password
         </label>
-        <input type="text" class="login__input" placeholder="********">
+        <input type="password" class="login__input" placeholder="********" name="pass">
     </div>
     <div class="login__row">
-        <button class="login__button">
+        <button class="login__button" type="submit">
             Войти
         </button>
     </div>
@@ -37,19 +37,19 @@
                 <label class="signup__label">
                     login
                 </label>
-                <input type="text"  class="signup__input" name="login">
+                <input type="text"  class="signup__input" name="login" autocomplete="off">
             </div>
             <div class="signup__row">
                 <label class="signup__label">
                     name
                 </label>
-                <input type="text" class="signup__input" placeholder="Григорий" name="name">
+                <input type="text" class="signup__input" placeholder="Григорий" name="name" autocomplete="off">
             </div>
             <div class="signup__row">
                 <label class="signup__label">
                     password
                 </label>
-                <input type="password" id="su-ps" class="signup__input" placeholder="********" name="pass">
+                <input type="password" id="su-ps" class="signup__input" placeholder="********" name="pass" autocomplete="off">
             </div>
             <div class="signup__row">
                 <button class="signup__button" type="submit">Sign Up</button>
@@ -74,7 +74,6 @@ const openFormFunc = () => {
 };
 
 signupTrigger.forEach((s) => s.addEventListener("click", openFormFunc));
-forms.forEach((f) => f.addEventListener("submit", (e) => e.preventDefault()));
 
 bg.addEventListener("click", () => {
     bg.classList.remove("active");

@@ -1,16 +1,9 @@
-const mainDate = document.querySelector(".main__welcome-date")
-const signup = document.querySelector(".signup");
-const signUpButton = document.querySelector(".signup__button");
-signup.addEventListener("submit", () => {
-    console.log(1);
-})
-signUpButton.addEventListener("click", () => {
-    console.log(2);
-})
+const mainDate = document.querySelector(".main__welcome-date");
+const conTime = document.querySelector(".main__consumption-time");
+const incTime = document.querySelector(".main__income-time");
 if (mainDate) {
     mainDate.innerHTML = `Сегодня: ${new Date().toLocaleDateString()}`
 }
-
 
 var currencyMask = IMask(
     document.querySelector(".currency-mask"),
@@ -18,9 +11,15 @@ var currencyMask = IMask(
       mask: 'num',
       blocks: {
         num: {
-          // nested masks are available!
           mask: Number,
           thousandsSeparator: ' '
         }
       }
-    });
+});
+
+if(conTime){
+  conTime.value = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+}
+if(incTime){
+  incTime.value = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+}

@@ -76,6 +76,13 @@ button {
     overflow: hidden;
 }
 
+.aside__photo {
+    border-radius: 40px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
 .aside__menu {
     display: flex;
     flex-direction: column;
@@ -414,38 +421,26 @@ button {
     justify-content: center;
 }
 
-.main__income-block {
-    height: 60vh;
-    background: white;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.main__income-title {
-    font-size: 40px;
-    position: absolute;
-    top: 40px;
+.main__income-title , .main__consumption-title {
+    font-size: 30px;
+    margin-bottom: 15px;
 }
 
 .main__income-info , .main__consumption-info {
     display: flex;
     gap: 30px;
-    align-items: center;
+    flex-direction: column;
 }
 
-.main__consumption-block {
-    height: 60vh;
+.main__consumption-block, .main__income-block {
+    max-height: 80vh;
+    height: 100%;
     background: white;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
 }
 
 .main__consumption-sum , .main__income-sum {
@@ -457,11 +452,6 @@ button {
     padding: 10px;
 }
 
-.main__consumption-title {
-    font-size: 40px;
-    position: absolute;
-    top: 40px;
-}
 
 .main__income-textarea, .main__consumption-textarea {
     resize: none;
@@ -498,13 +488,45 @@ button {
 }
 
 .main-table {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    
+    margin-top: 100px;
 }
 
 .main__table-block {
-    height: 60vh;
     background-color: white;
+    width: 100%;
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+}
+
+.main__submit-btn {
+    background-color: #2A86B1;
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+}
+
+.main__income-row, .main__consumption-row{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+
+.main__table {
+    border-collapse: collapse;
+}
+
+.main__table th {
+    padding: 10px;
+    text-transform: uppercase;
+    background: #2A86B1;
+    color: white;
+}
+.main__table td {
+    padding: 10px;
+    border: 1px solid black;
 }

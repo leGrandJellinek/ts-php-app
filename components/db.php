@@ -28,8 +28,37 @@ function userSign($login,$pass) {
     if($user['login'] == $login && password_verify($pass, $user['pass'])) {
        $_SESSION['login'] = $user['login'];
        $_SESSION['photo'] = $user['photo'];
-       $_SESSION['role'] = $user['role'];
     }else {
         return false;
     }
+}
+
+
+function addInc($sum, $login, $categ, $type, $date, $time, $comment) {
+    $pdo = pdo();
+    $query = "INSERT INTO total (sum, login, categ, type, date, time, comment) VALUES (?,?,?,?,?,?,?)";
+    $driver = $pdo->prepare($query);
+    $result = $driver->execute([$sum, $login, $categ, $type, $date, $time, $comment]);
+
+    return $result;
+}
+
+function addCon($sum, $login, $categ, $type, $date, $time, $comment) {
+    $pdo = pdo();
+    $query = "INSERT INTO total (sum, login, categ, type, date, time, comment) VALUES (?,?,?,?,?,?,?)";
+    $driver = $pdo->prepare($query);
+    $result = $driver->execute([$sum, $login, $categ, $type, $date, $time, $comment]);
+
+    return $result;
+}
+
+
+function tableInfo(){
+    $pdo = pdo();
+    $query = "SELECT * FROM total";
+    $driver = $pdo->prepare($query);
+    $driver->execute();
+    $total = $driver->fetchAll(PDO::FETCH_ASSOC);
+
+    return $total; 
 }
