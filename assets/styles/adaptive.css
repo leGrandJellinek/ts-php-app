@@ -31,3 +31,77 @@
         max-width: 100%;
     }
 }
+
+@media (max-width: 1300px){
+    .main__welcome-block {
+        height: 100%;
+    }
+}
+
+@media (max-width: 1140px) {
+    header {
+        margin-bottom: 250px;
+    }
+    .main {
+        margin-left: 0px;
+    }
+    .aside {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 15px;
+        z-index: 999999;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .aside__menu {
+       flex-direction: row; 
+       align-items: center;
+    }
+    .aside__menu li{
+        width: 85px;
+        height: 95px;
+    }
+    .aside__menu-link {
+        margin-left: 0px;
+        margin-bottom: 0px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .main-consumption{
+        height: 100%;
+        display: block;
+    }
+    .main-income{
+        height: 100%;
+        display: block;
+    }
+}
+
+@media (max-width: 993px){
+    .main__table-block {
+        overflow: auto;
+        display: block;
+    }
+
+    .main__table {
+        width: 1140px;
+    }
+}
+
+
+@media (max-width: 525px){
+    .main__welcome-top {
+        flex-direction: column;
+    }
+
+    .aside__menu li {
+        width: 45px;
+    }
+
+    .aside__menu-link i {
+        font-size: 25px;
+    }
+}

@@ -23,6 +23,8 @@
     <?endif;?>
 </aside>
 
+</header>
+
 
 <script>
 const loginAvatar = document.querySelector(".login-ava")

@@ -340,7 +340,6 @@ button {
 
 .main__welcome-block {
     background: white;
-    height: 90vh;
     margin-top: 30px;
     border-radius: 10px;
     padding: 30px 60px;
@@ -433,8 +432,10 @@ button {
 }
 
 .main__consumption-block, .main__income-block {
-    max-height: 80vh;
-    height: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 4px;
+    padding-right: 4px;
     background: white;
     border-radius: 10px;
     display: flex;
@@ -495,8 +496,9 @@ button {
     background-color: white;
     width: 100%;
     display: flex;
-    padding: 30px;
+    padding: 40px;
     justify-content: center;
+
 }
 
 .main__submit-btn {
